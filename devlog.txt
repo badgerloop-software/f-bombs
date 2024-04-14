@@ -1,0 +1,26 @@
+4/13/2024
+Currently still just researching about SOC and SOH implementations because I took a break from this project and forgot some stuff.
+Thinking of adding candecoder to this repo for now so I can test if the code I make mimics the orion2BMS. 
+I don't really know of any other reliable reference for SOC. 
+Thinking of just doing the orion2bms as a basic reference and maybe using a kalman filter for a better approximation
+
+research:
+- SOC is kinda hard to get but using coulomb counting is good
+- succeeds in low noise environments. Which is good for distributed BMS
+
+added Candecoder info: 
+- won't be the exact same. 
+- stores useful signals in its class private values
+added OrionBmsData to Candecoder:
+- just a struct of data which has all the data I want for reference
+
+added milliseconds delta_time:
+- used to calculate SOC using coulomb counting
+
+bombs constructor:
+- sets everything to 0
+
+
+things to do:
+calculate nomial capacity from the voltage using the table that jack sent you
+
